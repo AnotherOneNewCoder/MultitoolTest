@@ -22,3 +22,7 @@ dependencyResolutionManagement {
 rootProject.name = "MultitoolTest"
 include(":app")
 include(":app-api")
+include(":app-uikit")
+include(":app-features")
+include(":app-database")
+include(":app-data")

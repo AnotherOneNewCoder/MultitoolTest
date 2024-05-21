@@ -1,8 +1,11 @@
-package ru.zhogin.multitooltest.ui.theme
+package ru.zhogin.app.uikit
 
 import androidx.compose.material3.Typography
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
@@ -32,3 +35,29 @@ val Typography = Typography(
     )
     */
 )
+
+val Typography.BottomNavTitle: TextStyle
+    @Composable
+    get() {
+        return TextStyle(
+            fontSize = 14.sp
+        )
+    }
+
+val Typography.MediumTextWhite: TextStyle
+    @Composable
+    get() {
+        return TextStyle(
+            color = Color.White,
+            fontSize = 16.sp,
+        )
+    }
+val Typography.SmallItalicTextWhite: TextStyle
+    @Composable
+    get() {
+        return TextStyle(
+            color = Color.White,
+            fontSize = 12.sp,
+            fontStyle = FontStyle.Italic,
+        )
+    }
