@@ -29,8 +29,8 @@ internal fun AppMainScreen(
     val language = insultsViewModel.lang
     val navController = rememberNavController()
     val listBottomItem = listOf(
-        BottomItem.RandomInsult.route,
         BottomItem.RandomGif.route,
+        BottomItem.RandomInsult.route,
         BottomItem.Database.route,
         BottomItem.Settings.route
     )

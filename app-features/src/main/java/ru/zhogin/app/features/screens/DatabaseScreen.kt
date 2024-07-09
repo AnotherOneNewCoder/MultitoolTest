@@ -38,7 +38,9 @@ internal fun DataBaseScreen(
     deleteInsultFromDb: (InsultUI) -> Unit,
     insultsFromDb: State<RequestResult<List<InsultUI>>?>,
 ) {
-    Column {
+    Column(
+        modifier = Modifier.fillMaxSize().background(Color.Black)
+    ) {
         if (insultsFromDb.value is RequestResult.Error) {
             ErrorScreen()
         }

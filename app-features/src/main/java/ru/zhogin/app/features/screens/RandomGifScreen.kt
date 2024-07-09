@@ -3,22 +3,18 @@ package ru.zhogin.app.features.screens
 import android.os.Build.VERSION.SDK_INT
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.ImageLoader
@@ -76,17 +72,22 @@ internal fun ShowRandomGif(
         Image(
             painter = rememberAsyncImagePainter(gifUI.image, imageLoader),
             contentDescription = null,
-            modifier = Modifier.size(400.dp)
+            //modifier = Modifier.size(400.dp),
+            modifier = Modifier.fillMaxWidth().clickable {
+                newGif()
+            },
+            contentScale = ContentScale.FillWidth,
+
         )
-        Button(
-            onClick = { newGif() },
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black
-            ),
-            ) {
-             Icon(imageVector = Icons.Filled.Refresh, contentDescription = "new gif", tint = Color.White,
-                 modifier = Modifier.size(60.dp))
-        }
+//        Button(
+//            onClick = { newGif() },
+//            colors = ButtonDefaults.buttonColors(
+//                containerColor = Color.Black
+//            ),
+//            ) {
+//             Icon(imageVector = Icons.Filled.Refresh, contentDescription = "new gif", tint = Color.White,
+//                 modifier = Modifier.size(60.dp))
+//        }
     }
 
 }

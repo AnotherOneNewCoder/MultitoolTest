@@ -47,7 +47,7 @@ internal fun NavGraph(
     newGif: () -> Unit,
 ) {
     NavHost(
-        navController = navHostController, startDestination = BottomItem.RandomInsult.route,
+        navController = navHostController, startDestination = BottomItem.RandomGif.route,
         enterTransition = {
             fadeIn(
                 animationSpec = tween(

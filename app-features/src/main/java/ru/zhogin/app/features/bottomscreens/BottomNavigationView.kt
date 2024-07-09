@@ -23,8 +23,8 @@ fun BottomNavigationView(
     navController: NavController
 ) {
     val listBottomItem = listOf(
-        BottomItem.RandomInsult,
         BottomItem.RandomGif,
+        BottomItem.RandomInsult,
         BottomItem.Database,
         BottomItem.Settings,
     )
