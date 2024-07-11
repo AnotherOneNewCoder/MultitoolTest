@@ -79,15 +79,6 @@ internal fun ShowRandomGif(
             contentScale = ContentScale.FillWidth,
 
         )
-//        Button(
-//            onClick = { newGif() },
-//            colors = ButtonDefaults.buttonColors(
-//                containerColor = Color.Black
-//            ),
-//            ) {
-//             Icon(imageVector = Icons.Filled.Refresh, contentDescription = "new gif", tint = Color.White,
-//                 modifier = Modifier.size(60.dp))
-//        }
     }
 
 }
